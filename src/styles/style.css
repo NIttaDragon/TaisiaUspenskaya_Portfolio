@@ -56,7 +56,7 @@ body {
 }
 
 ul {
-  list-style-image: url('../images/_.png');
+  list-style-image: url('../images/dot.png');
   margin-left: 2rem;
 }
 
