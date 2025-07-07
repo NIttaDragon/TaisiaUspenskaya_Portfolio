@@ -44,3 +44,12 @@
   background-image: url('../images/telegram-black.svg');
   transition: 0.3s ease-in-out;
 }
+
+#gh-icon {
+  background-image: url('../images/github-white.svg');
+}
+
+#gh-icon:hover {
+  background-image: url('../images/github-black.svg');
+  transition: 0.3s ease-in-out;
+}
