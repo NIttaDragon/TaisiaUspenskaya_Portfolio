@@ -1,0 +1,46 @@
+#contacts-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+}
+
+.icon-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #B4E52E;
+  transition: 0.3s ease-in-out;
+}
+
+.icon-wrapper:hover {
+  background: #B4E52E;
+  transition: 0.3s ease-in-out;
+}
+
+.sm-icon {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+#vk-icon {
+  background-image: url('../images/vk-white.svg');
+}
+
+#vk-icon:hover {
+  background-image: url('../images/vk-black.svg');
+  transition: 0.3s ease-in-out;
+}
+
+#tg-icon {
+  background-image: url('../images/trlrgram-white.svg');
+}
+
+#tg-icon:hover {
+  background-image: url('../images/telegram-black.svg');
+  transition: 0.3s ease-in-out;
+}

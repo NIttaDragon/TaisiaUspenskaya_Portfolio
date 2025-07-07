@@ -1,0 +1,449 @@
+@import url('./global.css');
+@import url('./font.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./projects.css');
+
+
+
+body {
+  color: white;
+  background-color: black;
+}
+
+.main {
+  margin: 0 20px;
+}
+
+.pixel_text {
+  font-family: 'ComplianceSans', sans-serif;
+}
+
+.regular_text {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.description-text {
+  line-height: 150%;
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+}
+
+.title-text {
+  line-height: 200%;
+}
+
+.upper_text {
+  text-transform: uppercase;
+}
+
+#profession {
+  font-size: clamp(1.25rem, 0.568rem + 3.41vw, 3.125rem);
+  margin-left: 5px;
+}
+
+#fio {
+  font-size: clamp(1.75rem, 1.023rem + 3.64vw, 3.75rem);
+  margin: 5px;
+}
+
+.section_title {
+  font-size: 32px;
+}
+
+.article-title {
+  font-size: 40px;
+}
+
+ul {
+  list-style-image: url('../images/_.png');
+  margin-left: 2rem;
+}
+
+#title-section {
+  border-bottom: 1px solid white;
+}
+
+#photo {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px;
+  grid-row: 1 / span 2;
+}
+
+#my-photo {
+  background-image: url('../images/photo_2025-04-04_16-01-18.jpg');
+  background-position: center 25%;
+  background-size: cover;
+  width: 90%;
+  height: clamp(15.625rem, 8.807rem + 34.09vw, 34.375rem);
+  margin: 0 auto;
+}
+
+#photo-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+#line {
+  background-image: url('../images/line.svg');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+#cross {
+  background-image: url('../images/cross.svg');
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+#photo-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+#about-article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#characteristics {
+  grid-column: 2 / 3;
+  grid-row: 2/3;
+}
+
+.button-text {
+  color: white;
+  font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+  padding: 5px 10px;
+  transition: color 0.5s ease-in-out;
+}
+
+.button {
+  display: inline-block;
+  position: relative; 
+  overflow: hidden;
+  border: #B4E52E 2px solid;
+  transition: background-color 0.5s ease-in-out;
+  transform: perspective(1px) translateZ(0);
+  background-color: black;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  background: #B4E52E;
+  inset: 0;
+  translate: -100%;
+  transition: translate 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover::before {
+  translate: 0%;
+}
+
+.button:hover .button-text{
+  color: black; 
+  mix-blend-mode: normal;
+} 
+
+.button:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+/*
+
+a::before {
+  position: absolute;
+  content: attr(data-content);
+  top: 0;
+  left: 0;
+  width: 0;
+  color: midnightblue;
+  text-decoration: underline;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 275ms ease;
+}
+
+a:hover::before {
+  width: 100%;
+}
+*/
+
+/*
+.button {
+  display: inline-block;
+  overflow: hidden;
+  border: var(--themes-mainColor) 2px solid;
+  transition: box-shadow 0.3s ease,
+              background-color 0.5s ease-in-out;
+  transform: perspective(1px) translateZ(0);
+  background-color: #fff;
+}
+
+.button::before {
+  content: "";
+	position: absolute;
+	background: var(--themes-mainColor);
+  inset: 0;
+  translate: -100%;
+	transition: translate 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  translate: 0%;
+}
+
+.button:hover .button__text, 
+.button:hover .floppy {
+  mix-blend-mode: difference;
+}
+*/
+
+.project-description {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px;
+}
+
+.project-cover {
+  width: clamp(18.75rem, 11.932rem + 34.09vw, 37.5rem) ;
+  height: clamp(12.5rem, 7.955rem + 22.73vw, 25rem);
+  background-size: cover;
+  grid-column: 2;
+}
+
+#ono-tebe-nado {
+  background-image: url('../images/ono-tebe-nado.jpg');
+}
+
+#slozhno-sosredotochitsya {
+  background-image: url('../images/slozhno-sosredotochitsya.jpg');
+}
+
+#zakrivayuschiy-teg-f {
+  background-image: url('../images/zakrivayuschiy-teg-f.jpg');
+}
+
+#mesto {
+  background-image: url('../images/mesto.jpg');
+}
+
+#web-larek {
+  background-image: url('../images/web-larek.jpg');
+}
+
+#kouluttaa {
+  background-image: url('../images/kouluttaa.jpg');
+}
+
+.project-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.project:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+@media (width < 768px) {
+  #about-article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .progress {
+    width: 80%;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* 
+:root {
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 100%;
+  color: var(--main-color);
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-bold {
+  font-family: 'ArsenalBold', sans-serif;
+  font-weight: bold;
+  font-size: clamp(1.875rem, 1.049rem + 3.52vw, 4.75rem);
+  line-height: 100%;
+}
+
+.hero-regular {
+  font-family: 'ArsenalRegular', sans-serif;
+  font-weight: 100;
+  font-size: clamp(1.875rem, 1.049rem + 3.52vw, 4.75rem);
+  line-height: 100%;
+}
+
+.subhero {
+  font-family: 'ArsenalRegular', sans-serif;
+  font-weight: 100;
+  font-size: clamp(0.875rem, 0.516rem + 1.53vw, 2.125rem);
+  text-align: center;
+  line-height: 100%;
+  margin-top: 5px;
+  line-height: 100%;
+}
+
+.title {
+  font-family: 'ArsenalBold', sans-serif;
+  font-weight: bold;
+  font-size: clamp(1.875rem, 1.552rem + 1.38vw, 3rem);
+  line-height: 100%;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.title-text-bold {
+  font-family: 'ArsenalBold', sans-serif;
+  font-weight: bold;
+  font-size: clamp(1.375rem, 1.195rem + 0.77vw, 2rem);
+  line-height: 100%;
+}
+
+.title-text-regular {
+  font-family: 'ArsenalRegular', sans-serif;
+  font-weight: 100;
+  font-size: clamp(1.063rem, 0.793rem + 1.15vw, 2rem);
+  line-height: 100%;
+}
+
+.ordinary-text {
+  font-family: 'ArsenalRegular', sans-serif;
+  font-weight: 100;
+  font-size: clamp(1.063rem, 0.901rem + 0.69vw, 1.625rem);
+  line-height: 100%;
+}
+
+.menu-button {
+  font-family: 'ArsenalBold', sans-serif;
+  font-weight: bold;
+  font-size: clamp(0.875rem, 0.767rem + 0.46vw, 1.25rem);
+  line-height: 100%;
+}
+
+.input-text {
+  font-family: 'ArsenalRegular', sans-serif;
+  font-size: clamp(0.875rem, 0.767rem + 0.46vw, 1.25rem);
+  line-height: 100%;
+}
+
+.hints {
+  font-family: 'ArsenalRegular', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  font-size: clamp(0.625rem, 0.445rem + 0.77vw, 1.25rem);
+  line-height: 100%;
+}
+
+.hero {
+  padding-top: 20px;
+  background-size: cover;
+  background-position: center;
+  width: 100vw; 
+}
+
+.hero-text {
+  text-align: center;
+  line-height: 100%;
+}
+
+input {
+  padding: 5px;
+  border: var(--main-color) solid 1px;
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.button {
+  padding: clamp(0.313rem, 0.23rem + 0.38vw, 0.625rem) clamp(0.625rem, 0.543rem + 0.38vw, 0.938rem);
+  border: var(--main-color) solid 1px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.button:disabled {
+  opacity: 0.6;
+}
+
+.section {
+  padding: 0 clamp(1.25rem, 0.263rem + 4.51vw, 5rem);
+  margin-top: clamp(3.75rem, 3.092rem + 3.01vw, 6.25rem);
+}
+
+.validation-error {
+  color: red;
+  visibility: hidden;
+}
+
+.head-title {
+  margin-top: 20px;
+}
+
+.main-padding {
+  padding: 0 clamp(1.25rem, 0.263rem + 4.51vw, 5rem);
+  min-height: 83vh;
+}
+
+.marker {
+  border: 1px solid var(--main-color);
+  background-color: var(--background-color);
+  border-radius: 50%;
+  width: clamp(1.563rem, 1.114rem + 1.92vw, 3.125rem);
+  height: clamp(1.563rem, 1.114rem + 1.92vw, 3.125rem);
+}
+
+.done {
+  background-color: var(--main-color);
+  background-image: var(--done);
+  background-position: center;
+  background-size: 100%;
+}
+
+.current-step {
+  background-color: var(--main-color);
+} */

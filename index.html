@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Успенская Т.А. Портфолио</title>
+  <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+<body>
+  <header class="sticky-header header">
+    <nav class="regular_text navigation">
+      <a class="pixel_text upper_text nav-button" href="#about-article">Обо мне</a>
+      <a class="pixel_text upper_text nav-button" href="#projects">Проекты</a>
+      <a class="pixel_text upper_text nav-button" href="#contacts">Контакты</a>
+    </nav>
+    <div>
+        <button onclick="window['menu-dialog'].showModal()" class="header__menu-button header__menu-button_cmd_open"></button>
+        <dialog id="menu-dialog" class="header__menu">
+          <nav class="menu-list">
+            <a class="pixel_text upper_text nav-button" href="#about-article" onclick="window['menu-dialog'].close()">Обо мне</a>
+            <a class="pixel_text upper_text nav-button" href="#projects" onclick="window['menu-dialog'].close()">Проекты</a>
+            <a class="pixel_text upper_text nav-button" href="#contacts" onclick="window['menu-dialog'].close()">Контакты</a>
+          </nav>
+          <button onclick="window['menu-dialog'].close()" class="header__menu-button header__menu-button_cmd_close">
+          </button>
+        </dialog>
+      </div>
+  </header>
+  <main class="main">
+    <section id="title-section">
+        <p class="pixel_text upper_text" id="profession">Frontend-developer</p>
+        <h1 class="regular_text upper_text" id="fio">Таисия Успенская</h1>
+      </section>
+    <article id="about-article">
+      <section id="photo">
+        <div id="photo-description">
+          <p class="pixel_text upper_text">my_photo.jpg</p>
+          <div id="photo-buttons">
+            <div id="line"></div>
+            <div id="cross"></div>
+          </div>
+        </div>
+        <div id="my-photo"></div>
+      </section>
+      <section id="description">
+        <h2 class="pixel_text upper_text section_title">Обо мне</h2>
+        <p class="regular_text description-text">Начинающий Frontend-разработчик с базовым владением HTML, CSS и JavaScript. Ищу возможности для получения практического опыта и готова активно участвовать в разработке веб-интерфейсов в составе профессиональной команды. Стремлюсь создавать удобные и привлекательные веб-приложения, используя свои знания и навыки.</p>
+      </section>
+      <section id="characteristics ">
+        <h2 class="pixel_text upper_text section_title">Личные качества</h2>
+        <ul class="regular_text description-text">
+          <li>Открыта к общению и новым знакомствам</li>
+          <li>Обладаю организаторскими способностями</li>
+          <li>Ответственно отношусь к выполнению поручений</li>
+          <li>Люблю искать оригинальные решения</li>
+        </ul>
+      </section>
+      <section id="education">
+        <h2 class="pixel_text upper_text section_title">Образование</h2>
+        <ul>
+          <li class="regular_text">
+            <h3 class="title-text">2021-2025</h3>
+            <p class="description-text">ВУЗ: «Петербургский государственный университет путей сообщения Императора Александра I»</p>
+            <p class="description-text">Направление: 09.03.01 Информатика и вычислительная техника</p>
+            <p class="description-text">Ступень образования: Бакалавриат</p>
+            <p class="description-text">Диплом: с отличием</p>
+          </li>
+        </ul>
+      </section>
+      <section id="courses">
+        <h2 class="pixel_text upper_text section_title">Курсы</h2>
+        <ul>
+          <li class="regular_text">
+            <h3 class="title-text">2023-2024</h3>
+            <p class="description-text">Платформа: Яндекс Практикум</p>
+            <p class="description-text">Профиль: Дизайнер интерфейсов</p>
+            <p class="description-text">Сатус: завершён</p>
+          </li>
+          <li class="regular_text">
+            <h3 class="title-text">2024-2025</h3>
+            <p class="description-text">Платформа: Яндекс Практикум</p>
+            <p class="description-text">Профиль: Фронтенд-разработчик</p>
+            <p class="description-text">Сатус: в процессе</p>
+          </li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h2 class="pixel_text upper_text section_title">Навыки</h2>
+        <div class="skill">
+          <div class="skill-name">
+            <p class="pixel_text upper_text">HTML</p>
+          </div>
+          <div class="progress" id="html-skill"></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <p class="pixel_text upper_text">CSS</p>
+          </div>
+          <div class="progress" id="css-skill"></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <p class="pixel_text upper_text">JS</p>
+          </div>
+          <div class="progress" id="js-skill"></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <p class="pixel_text">Figma</p>
+          </div>
+          <div class="progress" id="figma-skill"></div>
+        </div>
+      </section>
+    </article>
+    <article id="projects">
+      <h2 class="pixel_text upper_text article-title">Проекты</h2>
+      <section class="project">
+        <h3 class="pixel_text section_title">1. Оно тебе надо</h3>
+        <div class="project-description">
+          <div class="project-cover" id="ono-tebe-nado"></div>
+          <div class="project-text">
+            <p class="regular_text description-text">Первая работа на курсе Фронтенд-разработчик. Простой лендинг с использованием HTML и CSS. Основной задачей было повторить макет пиксель в пиксель, для этого использовался плагин для Chrome PixelPerfect.</p>
+            <button class="button">
+              <a class="button-text pixel_text " href="https://nittadragon.github.io/ono-tebe-nado/">На сайт</a>
+            </button>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://github.com/NIttaDragon/ono-tebe-nado.git">На GitHub</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <h3 class="pixel_text section_title">2. Сложно сосредоточится</h3>
+        <div class="project-description">
+          <div class="project-cover" id="slozhno-sosredotochitsya"></div>
+          <div class="project-text">
+            <p class="regular_text description-text">Вторая работа на курсе Фронтенд-разработчик. Сайт-статья с возможностью изменения цветовой схемы по нажатию кнопки, или по-умолчанию из настроек пользователя.</p>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://nittadragon.github.io/slozhno-sosredotochitsya/">На сайт</a>
+            </button>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://github.com/NIttaDragon/slozhno-sosredotochitsya">На GitHub</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <h3 class="pixel_text section_title">3. Закрывающий тег</h3>
+        <div class="project-description">
+          <div class="project-cover" id="zakrivayuschiy-teg-f"></div>
+          <div class="project-text">
+            <p class="regular_text description-text">Третья работа на курсе Фронтенд-разработчик. Сайт с небольшими постами с впечатлениями от прохождения курса. Этот проект посвящён работе с анимацией, фильтрами изображений и запоминанию состояния объектов.</p>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://nittadragon.github.io/zakrivayuschiy-teg-f/">На сайт</a>
+            </button>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://github.com/NIttaDragon/zakrivayuschiy-teg-f.git">На GitHub</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <h3 class="pixel_text section_title">4. Место</h3>
+        <div class="project-description">
+          <div class="project-cover" id="mesto"></div>
+          <div class="project-text">
+            <p class="regular_text description-text">Четвёртая работа на курсе Фронтенд-разработчик. Небольшая социальная сеть, позволяющая менять имя, фотографию и описание профиля, выкладывать картинки с подписями на общий сервер группы. Целью проекта было научиться работать с сервером: отправлять на него данные и принимать от него ответы, а также знакомство с WebPack.</p>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://nittadragon.github.io/mesto-project-ff/">На сайт</a>
+            </button>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://github.com/NIttaDragon/mesto-project-ff">На GitHub</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="project">
+        <h3 class="pixel_text section_title">5. Web-ларёк</h3>
+        <div class="project-description">
+          <div class="project-cover" id="web-larek"></div>
+          <div class="project-text">
+            <p class="regular_text description-text">Пятая работа на курсе Фронтенд-разработчик. Одностраничный сайт интернет магазина. Реализовано добавление товара в корзину, удаление из неё, оформление заказа с отправкой данных пользователя и товара на сервер. Цель проекта построения архитектуры приложений MVC и реализация основного функционала.</p>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://nittadragon.github.io/web-larek-frontend/">На сайт</a>
+            </button>
+            <button class="button">
+              <a class="button-text pixel_text" href="https://github.com/NIttaDragon/web-larek-frontend">На GitHub</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="project">
+        <h3 class="pixel_text section_title">6. Сайт компании KOULUTTAA</h3>
+        <div class="project-description">
+          <div class="project-cover" id="kouluttaa"></div>
+          <div class="project-text">
+            <p class="regular_text description-text">Выпускная квалификационная работа в университете. Цель - разработка веб-сервиса для компании, осуществляющей отправку посылок, корреспонденции и животных по железной дороге с панелью для слабовидящих людей.</p>
+            <button class="button">
+              <a class="button-text pixel_text" href="">На сайт</a>
+            </button>
+            <button class="button">
+              <a class="button-text pixel_text" href="">На GitHub</a>
+            </button>
+          </div>
+        </div>
+      </section>-->
+    </article>
+   </main>
+
+   <footer id="contacts">
+    <h2 class="pixel_text upper_text article-title">Контакты</h2>
+    <div id="contacts-wrapper">
+      <p class="regular_text description-text">Электронная почта: <br><a href="mailto:uspemskaya@gmail.com" class="nav-button">uspemskaya@gmail.com</a></p>
+      <a class="icon-wrapper" href="https://vk.com/aya_kenteros">
+        <div id="vk-icon" class="sm-icon"></div>
+      </a>
+      <a class="icon-wrapper" href="https://t.me/aya_kenteros">
+        <div id="tg-icon" class="sm-icon"></div>
+      </a>
+    </div>
+   </footer>
+</body>
+</html>

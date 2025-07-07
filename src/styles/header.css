@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+}
+
+.navigation{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ width: 100%;
+ border-bottom: 1px solid white;
+}
+
+.sticky-header {
+  background-color: black;
+  width: 100%;
+  position: sticky;
+  top: -1px;
+  z-index: 100;
+}
+
+.nav-button {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  color: #B4E52E;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__menu-button {
+  margin-left: 20px;
+  inline-size: 25px;
+  block-size: 25px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.header__menu {
+  position: fixed;
+  inset: 0 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: none;
+  padding: 20px;
+  background-color: transparent;
+  transition: translate 0.3s ease-in-out;
+  translate: 100%;
+  margin: 0;
+}
+
+.menu-list {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.header__menu-button_cmd_open {
+  margin: 10px;
+  background-image: url('../images/menu.png');
+}
+
+.header__menu-button_cmd_close {
+  background-image: url('../images/cross.svg');
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.header__menu[open] {
+  translate: 0;
+}
+
+.header__menu[open]::backdrop {
+  backdrop-filter: blur(10px);
+}
+
+@media (width >= 500px) {
+  .header__menu-button {
+    display: none;
+  }
+}
+
+@media (width <= 500px) {
+  .navigation {
+    display: none;
+  }
+
+  .header {
+    justify-content: end;
+  }
+}
+
+@media (width < 768px) {
+
+}

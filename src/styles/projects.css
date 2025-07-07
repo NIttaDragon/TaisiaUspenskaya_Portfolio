@@ -1,0 +1,64 @@
+#skills {
+  grid-column: 1 / span 2;
+}
+
+.skill-name {
+  border: 1px solid #B4E52E;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B4E52E;
+  color: black;
+  font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+}
+
+.skill:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.progress {
+  position: relative;
+  left: -10px;
+  z-index: -1;
+  width: 90%;
+  height: 20px;
+  border: 1px solid #B4E52E;
+  border-radius: 5px;
+  background: linear-gradient(to right, #B4E52E 75%, black 0);
+  background-size: 15px 100%;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: black;
+  border-radius: 0 5px 5px 0;
+  z-index: 1;
+}
+
+#html-skill.progress::after {
+  width: 25%;
+}
+
+#css-skill.progress::after {
+  width: 30%;
+}
+
+#js-skill.progress::after {
+  width: 40%;
+}
+
+#figma-skill.progress::after {
+  width: 15%;
+}
